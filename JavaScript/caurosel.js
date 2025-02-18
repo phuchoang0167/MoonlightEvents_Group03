@@ -1,8 +1,13 @@
-// caurosel
-var index = 0;
-function moveSlide() {
-    const carousel = document.getElementById('carousel');
-    index = (index + 1) % 3;
-    carousel.style.transform = `translateX(${-index * 100}%)`;
-}
-setInterval(moveSlide, 5000);
+document.addEventListener('DOMContentLoaded', function() {
+  let currentIndex = 0;
+  const images = document.querySelectorAll('.carousel-image');
+  const totalImages = images.length;
+
+  function showNextImage() {
+      currentIndex = (currentIndex + 1) % totalImages;
+      const offset = -currentIndex * 100;
+      document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+  }
+
+  setInterval(showNextImage, 3000); // Chuyển đổi hình ảnh mỗi 3 giây
+});

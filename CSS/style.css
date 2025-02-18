@@ -24,14 +24,12 @@ body {
     }
     .vis{
       color: #FEF9E1;
-      width: 304px;
-      color: #FEF9E1;
-      text-decoration: none;
       font-size: 20px;
       text-align: center;
-      display: block;
     }
     .column {
+      width: 1270px;
+      margin: auto;
       display: flex;
       align-items: center;
       gap: 20px;
@@ -57,7 +55,8 @@ body {
       position: absolute;
       background-color: #A31D1D;
       border-radius: 5px;
-      min-width: 160px;
+      min-width: 100px;
+      max-width: 304px;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 1;
       top: 100%;
@@ -79,35 +78,166 @@ body {
     }
 
   /* Carousel */
-  .carousel-container {
-          width: 80%;
-          margin: auto;
-          overflow: hidden;
-          position: relative;
-      }
-      .carousel {
-          display: flex;
-          width: 300%;
-          transition: transform 0.5s ease-in-out;
-      }
-      .slide {
-          width: 100%;
-          flex: 0 0 100%;
-      }
-      .carousel img {
-          max-height: 720px;
-          max-width: 1000px;
-          display: block;
-      }
+  .carousel {
+    border-radius: 5px;
+    position: relative;
+    max-height: 600px;
+    width: 1270px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+
+  .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-image {
+    min-width: 100%;
+  }
+
+  
+
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(0); }
+    30% { transform: translateX(-100%); }
+    55% { transform: translateX(-100%); }
+    60% { transform: translateX(-200%); }
+    100% { transform: translateX(-200%); }
+  }
+  
+
+  /* position */
+  .theme-container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto;
+    margin-bottom: 30px;
+  }
+  .title {
+    background-color: #FFEEAD;
+    border-radius: 5px 5px 0 0;
+    grid-column: span 2;
+    padding: 20px;
+    text-align: center;
+  }
+  .img-large {
+    position: relative;
+    height: 500px;
+    background-color: #A31D1D;
+    width: 100%;
+  }
+  .img-content{
+    height: 30%;
+    width: 100%;
+    background-color: #FFEEAD;
+    bottom: 0;
+    opacity: 80%;
+    position:absolute;
+  }
+  .img-right-top, .img-right-bottom {
+    position: relative;
+    height: 250px;
+    background-color: #A31D1D;
+  }
+  .right-section {
+    display: grid;
+    grid-template-rows: 50% 50%;
+  }
+
+  /* Subcribe */
+  .subcribe-container {
+    max-width: 1000px;
+    border-radius: 5px;
+    background: linear-gradient(to left, #FFEEAD 60%, #A31D1D 100%);
+    align-items: center;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .subscribe-section {
+    color: #FEF9E1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 100px;
+  }
+  .input-group input {
+    padding: 10px;
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+    background: #FEF9E1;
+  }
+  button {
+    padding: 10px 10px;
+    margin-left: 10px;
+    width: 120px;
+    color:#FEF9E1;
+    background: #A31D1D;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+  .image-section {
+    width: 100%;
+}
+
+  /* Contact-content */
+  .contact-head-container{
+    max-width: 1000px;
+    margin: auto;
+  }
+  .contact-head-item{
+    width: 100%;
+    background-color: #FFEEAD;
+    float: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 30px;
+  }
+  .contact-title h1{
+    color: #A31D1D;
+  }
+  .contact-title{
+    text-align: center;
+  }
+  .contact-item{
+    color: #FEF9E1;
+    border-radius: 5px;
+    height: 100px;
+    background-color: #A31D1D;
+    float: left;
+    margin: auto;
+    width: 250px;
+    padding: 10px;
+  }
+
+  /* Current ticket */
+  .ticker-container {
+    position: sticky;
+    bottom: 0;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    background-color:#A31D1D;
+    color: white;
+    overflow: hidden;
+  }
+
+  .ticker {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
 
   /* Footer */
   footer{
     background-color: #FFEEAD;
   }
-      .footer-content {
-          width: 1270px;
-          margin: auto;
-      }
       .footer-section {
           width: 304px;
           padding: 20px 10px;

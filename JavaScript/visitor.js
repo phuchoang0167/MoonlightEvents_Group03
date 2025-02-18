@@ -1,5 +1,11 @@
-// visitor
-var count = localStorage.getItem("visitCount") || 0;
-count++;
-localStorage.setItem("visitCount", count);
-document.getElementById("counter").innerText = count;
+let viewCount = localStorage.getItem('viewCount');
+
+if (!viewCount) {
+    viewCount = 0;
+}
+
+viewCount++;
+
+localStorage.setItem('viewCount', viewCount);
+
+document.getElementById('viewCount').innerText = viewCount;
