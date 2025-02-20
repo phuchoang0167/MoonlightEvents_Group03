@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="./JavaScript/caurosel.js"></script>
+  <script src="./JavaScript/ticket.js"></script>
+  <script src="./JavaScript/visitor.js"></script>
+  <script src="./JavaScript/feedback.js"></script>
+  <script src="./JavaScript/breadcrumb.js" ></script>
+
+  <!-- css -->
+  <link rel="stylesheet" href="./CSS/style.css">
+
+  <title>Event_Japan</title>
+
+  <script>
+    function expandText() {
+      var text = document.getElementById("text");
+      text.classList.add("expanded"); // Expand the text
+      document.getElementById("myBtn").style.display = "none"; // Hide the button
+    }
+  </script>
+
+</head>
+
+<body>
+  <!-- navbar -->
+  <header id="navbar">
+    <div class="column">
+      <div class="none-hover"><a href="Homepage.html"><img src="./Image/logo.png" height="50px" alt=""></a></div>
+
+      <div class="dropdown">
+        <a class="content effect" href="Gallery.html">Country</a>
+        <div class="dropdown-content">
+          <a class="effect" href="Event_Vietnam.html">Vietnam</a>
+          <a class="effect" href="Event_China.html">China</a>
+          <a class="effect" href="Event_Japan.html">Japan</a>
+          <a class="effect" href="#">More galley</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a class="content effect" href="Gallery.html">Religion</a>
+        <div class="dropdown-content">
+          <a class="effect" href="Gallery.html">Buddhism</a>
+          <a class="effect" href="Gallery.html">Christianity</a>
+          <a class="effect" href="Gallery.html">More galley</a>
+        </div>
+      </div>
+
+      <a class="content effect" href="">Gallery</a>
+      <div class="none-hover">Visitor <span id="viewCount">0</span></div>
+    </div>
+  </header>
+
+  <!-- breadcrumb -->
+  <div class="breadcrumb"><a href="Homepage.html">Homepage</a> / <a href="Gallery.html">Gallery</a> / <a href="Event_Japan.html">Event_Japan</a></div> </div>
+
+  <!-- Carousel Section -->
+  <div class="carousel">
+    <div class="carousel-images">
+      <img class="carousel-image" src="./Image/Tsukimi.png" alt="">
+      <img class="carousel-image" src="./Image/japan event.png" alt="">
+      <img class="carousel-image" src="3" alt="">
+    </div>
+  </div>
+
+  <!-- Body -->
+  <div class="body-content-container">
+    <div class="body-content-title">
+      <h1>Tsukimi - The moonlight Japan event</h1>
+    </div>
+    <div class="body-content" >
+      <p class="body-content-text" id="text">
+        <strong>Mid-Autumn Japan</strong><br><br>
+
+        <strong>History:</strong><br><br>
+        The Tsukimi Festival (月見, Tsukimi), or "moon-viewing," has been celebrated in Japan for over a thousand years. It originated during the Nara period (710-794) when it was introduced from China.<br><br>
+        It was initially a noble tradition where aristocrats of the Heian period (794-1185) gathered under the full moon to compose poetry and enjoy music.<br><br>
+        By the Edo period (1603-1868), Tsukimi became popular among commoners, evolving into a festival that honored the autumn harvest.<br><br>
+        Farmers would offer crops to the moon in gratitude for a bountiful season, solidifying the festival's agricultural significance.<br><br>
+        
+        <strong>Meaning:</strong><br><br>
+        The Tsukimi Festival symbolizes appreciation, gratitude, and the beauty of nature.<br><br>
+        The round full moon represents completeness and harmony, reinforcing themes of family unity and prosperity.<br><br>
+        The festival is also linked to Japanese folklore, particularly the tale of the Moon Rabbit (月の兎, Tsuki no Usagi), a celestial rabbit said to be pounding mochi on the moon.<br><br>
+        
+        <strong>Traditional:</strong><br><br>
+        <strong>Tsukimi Dango (月見団子):</strong> The most famous festival food, these round rice dumplings symbolize gratitude and good fortune.<br><br>
+        They are often stacked in a pyramid shape, representing the full moon and prosperity.<br><br>
+        <strong>Susuki (ススキ, Pampas Grass):</strong> Pampas grass is displayed during Tsukimi as it is believed to protect against evil spirits and symbolize a good harvest.<br><br>
+        Its golden hues in autumn resemble ripened rice stalks, reinforcing the festival's agricultural roots.<br><br>
+        <strong>Moon Gazing:</strong> Families and friends gather at home, temples, or gardens with open views of the night sky to admire the beauty of the full moon.<br><br>
+        Traditional tea ceremonies and poetry recitations often accompany this practice, preserving Heian-era customs.<br><br>
+        <strong>Seasonal Foods:</strong> Besides Tsukimi Dango, people enjoy chestnuts, taro, sweet potatoes, and Tsukimi-style dishes such as Tsukimi Udon and Tsukimi Soba, which include raw or poached eggs resembling the moon.<br><br>
+        <strong>Folklore - The Moon Rabbit:</strong> Unlike the Chinese legend of Chang'e, Japanese folklore tells of a kind-hearted rabbit who was rewarded for its selflessness by being sent to the moon.<br><br>
+        There, it eternally pounds mochi, a story deeply tied to Tsukimi, and many decorations and sweets feature the Moon Rabbit.<br><br>
+        
+        Tsukimi remains a cherished festival in Japan, blending ancient traditions with modern celebrations.<br><br>
+        Whether through poetic moon-gazing gatherings or simply enjoying a bowl of Tsukimi noodles, the festival continues to foster a sense of gratitude and appreciation for the beauty of autumn.<br><br>
+        
+        <strong>Gallery</strong><br><br>
+        <img src="./Image/Emperor Go-Daigo.jpg" alt="">
+        <img src="./Image/japan event.png" alt="">
+        <img src="./Image/Tsukimi udon.JPG" alt="">
+
+      </p>
+      <button onclick="expandText()" id="myBtn">Read more</button>
+    </div>
+  </div>
+
+  <!-- dowload button -->
+  <div class="dowload-button">
+    <button><a href="./File dowload/Tsukimi Japan.docx" download>Download doc</a></button>
+    <button><a href="./File dowload/Tsukimi Japan.pdf" download>Download pdf</a></button>
+  </div>
+
+  <!-- Feedback -->
+<div class="feedback">
+  <div class="feedback-container">
+    <h1>User Feedback</h1>
+    <div class="form-group">
+      <div class="box">
+        <label>Name:</label>
+        <input placeholder="Enter your name" type="text" id="name">
+      </div>
+      <div class="box">
+        <label>Subject:</label>
+        <input placeholder="Enter your subject" type="text" id="subject">
+      </div>
+    </div>
+    <div class="describe">
+      <div style="margin-bottom: 5px;">
+        <label>Describe:</label>
+      </div>
+      <div>
+        <textarea placeholder="Enter your Describe" id="description"></textarea>
+      </div>
+    </div>
+    <button class="confirm-button" onclick="submitFeedback()">Confirm</button>
+    <div class="feedback-box" id="feedbackSection">Feedback user</div>
+  </div>
+</div>
+
+  <!-- Ticket -->
+  <div class="ticker-container">
+    <div class="ticker" id="ticker">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="column" style="align-items:baseline;">
+      <div class="footer-section">
+        <h3> MOONLIGHT EVENTS</h3>
+        <p>MOONLIGHT EVENTS organizes festivals around the world, in collaboration with
+          municipalities, and local city associations, where we have been hosting festivals for many
+          years.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Sitemap</h3>
+        <a href="Homepage.html">Homepage</a>
+        <p></p>
+        <a href="">Gallery</a><br>
+        <a href="Event_Japan.html">&bull; Event_Japan</a><br>
+        <a href="Event_Vietnam.html">&bull; Event_Vietnam</a><br>
+        <a href="Event_China.html">&bull; Event_China</a>
+        <p></p>
+        <a href="#">FAQ</a>
+        <p></p>
+        <a href="#">About us</a>
+        <p></p>
+        <a href="Contact us.html">Contact us</a>
+        <p></p>
+      </div>
+      <div class="footer-section">
+        <h3>About us</h3>
+        <p>If you want to know more and more with us</p>
+        <a href="#">Here to know who we are</a>
+        <h3>FAQ</h3>
+        <p>You can find some question you must be read them</p>
+        <a href="#">Sometime you need them</a>
+      </div>
+      <div class="footer-section">
+        <h3>Contact us</h3>
+        <div class="foot-text">Email</div>
+        <a href="Contact us.html">Contact us</a>
+        <p></p>
+        <div class="foot-text">Telephone</div>
+        <div>(+84) 96-742-12-45</div>
+        <p></p>
+        <div class="foot-text">Fax number</div>
+        <div>(020) 3808-9435</div>
+        <p></p>
+        <div class="foot-text">Address</div>
+        <div>Number 62 - Street 36, Van Phuc Residential Area, Hiep Binh Phuoc Ward, Thu Duc City</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Copyright: MoonLight Events
+    </div>
+  </footer>
+</body>
+
+</html>
