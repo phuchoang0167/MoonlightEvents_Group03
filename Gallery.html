@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- javascript -->
+  <script src="./JavaScript/ticket.js"></script>
+  <script src="./JavaScript/visitor.js"></script>
+  <script src="./JavaScript/filter-nav.js"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" href="./CSS/style.css">
+  <title>Event Gallery</title>
+
+</head>
+
+<body>
+  <!-- navbar -->
+  <header id="navbar">
+    <div class="column">
+      <div class="none-hover"><a href="Homepage.html"><img src="./Image/logo.png" height="50px" alt=""></a></div>
+
+      <div class="dropdown">
+        <a class="content effect" href="Gallery.html">Country</a>
+        <div class="dropdown-content">
+          <a class="effect" href="Event_Vietnam.html">Vietnam</a>
+          <a class="effect" href="Event_China.html">China</a>
+          <a class="effect" href="Event_Japan.html">Japan</a>
+          <a class="effect" href="Gallery.html">More galley</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a class="content effect" href="Gallery.html">Religion</a>
+        <div class="dropdown-content">
+          <a class="effect" href="#" onclick="setReligion('Buddhism')">Buddhism</a>
+          <a class="effect" href="#" onclick="setReligion('Hinduism')">Hinduism</a>
+          <a class="effect" href="Gallery.html">More gallery</a>
+        </div>
+      </div>
+      
+      <a class="content effect" href="Gallery.html">Gallery</a>
+      <div class="none-hover">Visitor <span id="viewCount">0</span></div>
+    </div>
+  </header>
+
+  <!-- filter -->
+  <div class="filter">
+    <div style="padding: 20px;">
+      <h1 id="gallery-title">Gallery</h1>
+    </div>
+  </div>
+  <div class="filter-container">
+    <div style="padding: 20px;">
+      <select id="countrySelect">
+        <option value="">Country</option>
+        <option value="Japan">Japan</option>
+        <option value="China">China</option>   
+        <option value="Myanmar">Myanmar</option>
+        <option value="Vietnam">Vietnam</option>
+        <option value="Cambodia">Cambodia</option>
+        <option value="Nepal">Nepal</option>
+        <option value="Sri Lanka">Sri Lanka</option>
+        <option value="Tibet">Tibet</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Bulgaria">Bulgaria</option>
+        <option value="United States">United States</option>
+        <option value="Mali">Mali</option>
+        <option value="Thailand">Thailand</option>
+      </select>
+      <select id="religionSelect">
+        <option value="">Religion</option>
+        <option value="Hinduism">Hinduism</option>
+        <option value="Buddhism">Buddhism</option>
+        <option value="Native American">Native American</option>
+        <option value="Dogon Spirituality">Dogon Spirituality</option>
+      </select>
+      <select id="monthSelect">
+        <option value="">Month</option>
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+      </select>
+      <button onclick="filterEvents()">Find</button>
+      <button id="reset-btn">Reset</button>
+    </div>
+  </div>
+  <div class="sort-container">
+    <select id="sortSelect" onchange="filterEvents()">
+      <option value="">Sort by</option>
+      <option value="name">Name</option>
+    </select>
+  </div>
+
+  <!-- event -->
+  <div class="gallery">
+    <a href="Event_Japan.html">
+      <div class="event" data-country="Japan" data-religion="Buddhism" data-month="September">
+        <img src="./Image/Tsukimi.png">
+        <h3>Tsukimi</h3>
+        <p>A Japanese festival celebrating the autumn moon, often with offerings of rice dumplings.</p>
+      </div>
+    </a>
+    <a href="Event_China.html">
+      <div class="event" data-country="China" data-religion="Buddhism" data-month="September">
+        <img src="./Image/china(2).jpg">
+        <h3>Mid autumn - China</h3>
+        <p>A Chinese festival honoring the full moon with mooncakes, lanterns, and family gatherings.</p>
+      </div>
+    </a>
+    <a href="Event_Vietnam.html">
+      <div class="event" data-country="Vietnam" data-religion="Buddhism" data-month="September">
+        <img src="./Image/Vietnam.png">
+        <h3>Mid autumn - Vietnam</h3>
+        <p>A Vietnamese festival featuring lion dances, lantern parades, and mooncakes.</p>
+      </div>
+    </a>
+    <a href="">
+      <div class="event" data-country="Myanmar" data-religion="Buddhism" data-month="October">
+        <img src="./Image/Thadingyut Festival.jpg">
+        <h3>Thadingyut Festival</h3>
+        <p>A Buddhist festival in Myanmar marking the end of the Buddhist Lent, celebrated with lanterns and moonlit prayers.</p>
+      </div>
+    </a>
+    <a href="">
+      <div class="event" data-country="Cambodia" data-religion="Buddhism" data-month="November">
+        <img src="./Image/Bon Om Touk.jpg">
+        <h3>Bon Om Touk</h3>
+        <p>The Cambodian Water Festival, held during the full moon, featuring boat races and moonlight festivities.</p>
+      </div>
+    </a>
+    <a href="">
+      <div class="event" data-country="Thailand" data-religion="Buddhism" data-month="November">
+        <img src="./Image/Loy Krathong.jpg">
+        <h3>Loy Krathong</h3>
+        <p>A Thai festival where people float lanterns on rivers to show gratitude and wash away misfortunes.</p>
+      </div>
+    </a>
+    <a href="">
+      <div class="event" data-country="Sri Lanka" data-religion="Buddhism" data-month="January">
+        <img src="./Image/Duruthu Poya.jpg">
+        <h3>Duruthu Poya</h3>
+        <p>A full moon day in Sri Lanka marking Buddha's first visit to the island.</p>
+      </div>
+    </a>
+    <a href="">
+      <div class="event" data-country="Tibet" data-religion="Buddhism" data-month="February">
+        <img src="./Image/Chotrul Duchen.jpg">
+        <h3>Chotrul Duchen</h3>
+        <p>A Tibetan Buddhist festival celebrating the miracles of Buddha, held on the full moon.</p>
+      </div>
+    </a>
+    <a href="">
+      <div class="event" data-country="Bulgaria" data-religion="Cultural" data-month="September">
+        <img src="./Image/Moonlight Festival Sofia.png">
+        <h3>Moonlight Festival Sofia</h3>
+        <p>Held in Sofia, Bulgaria, this festival transforms buildings and architecture into stunning light artworks.</p>
+    </div>
+    </a>
+    <a href="">
+      <div class="event" data-country="Nepal" data-religion="Hinduism" data-month="August">
+        <img src="./Image/Janai Purnima.jpg">
+        <h3>Janai Purnima</h3>
+        <p>A Hindu festival in Nepal where people bathe in holy rivers and celebrate under the full moon.</p>
+      </div>
+    </a>
+    <a href="">
+      <div class="event" data-country="United States" data-religion="Native American" data-month="October">
+        <img src="./Image/Hunter's Moon.jpg">
+        <h3>Hunter's Moon</h3>
+        <p>A Native American tradition marking the full moon after the Harvest Moon, used for hunting preparation.</p>
+      </div>
+    </a>
+    <a href="">
+      <div class="event" data-country="Mali" data-religion="Dogon Spirituality" data-month="December">
+        <img src="./Image/Sigi Festival.jpeg">
+        <h3>Sigi Festival</h3>
+        <p>A Dogon tribal festival in Mali, celebrated once every 60 years, linked to the Sirius star and moon cycles.</p>
+      </div>
+    </a>
+  </div>
+  <div class="show-more">
+    <button id="show-more-btn">Show more</button>
+  </div>
+
+  <!-- Ticket -->
+  <div class="ticker-container">
+    <div class="ticker" id="ticker">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="column" style="align-items:baseline;">
+      <div class="footer-section">
+        <h3> MOONLIGHT EVENTS</h3>
+        <p>MOONLIGHT EVENTS organizes festivals around the world, in collaboration with
+          municipalities, and local city associations, where we have been hosting festivals for many
+          years.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Sitemap</h3>
+        <a href="Homepage.html">Homepage</a>
+        <p></p>
+        <a href="Gallery.html">Gallery</a><br>
+        <a href="Event_Japan.html">&bull; Event_Japan</a><br>
+        <a href="Event_Vietnam.html">&bull; Event_Vietnam</a><br>
+        <a href="Event_China.html">&bull; Event_China</a>
+        <p></p>
+        <a href="#">FAQ</a>
+        <p></p>
+        <a href="#">About us</a>
+        <p></p>
+        <a href="Contact us.html">Contact us</a>
+        <p></p>
+      </div>
+      <div class="footer-section">
+        <h3>About us</h3>
+        <p>If you want to know more and more with us</p>
+        <a href="#">Here to know who we are</a>
+        <h3>FAQ</h3>
+        <p>You can find some question you must be read them</p>
+        <a href="#">Sometime you need them</a>
+      </div>
+      <div class="footer-section">
+        <h3>Contact us</h3>
+        <div class="foot-text">Email</div>
+        <a href="Contact us.html">Contact us</a>
+        <p></p>
+        <div class="foot-text">Telephone</div>
+        <div>(+84) 96-742-12-45</div>
+        <p></p>
+        <div class="foot-text">Fax number</div>
+        <div>(020) 3808-9435</div>
+        <p></p>
+        <div class="foot-text">Address</div>
+        <div>Number 62 - Street 36, Van Phuc Residential Area, Hiep Binh Phuoc Ward, Thu Duc City</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Copyright: MoonLight Events
+    </div>
+  </footer>
+</body>
+
+</html>

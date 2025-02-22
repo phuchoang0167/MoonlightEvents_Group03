@@ -16,6 +16,7 @@
   <script src="./JavaScript/ticket.js"></script>
   <script src="./JavaScript/visitor.js"></script>
   <script src="./JavaScript/check.js"></script>
+  <script src="./JavaScript/filter-nav.js"></script>
 
   <!-- css -->
   <link rel="stylesheet" href="./CSS/style.css">
@@ -36,20 +37,20 @@
           <a class="effect" href="Event_Vietnam.html">Vietnam</a>
           <a class="effect" href="Event_China.html">China</a>
           <a class="effect" href="Event_Japan.html">Japan</a>
-          <a class="effect" href="#">More galley</a>
+          <a class="effect" href="Gallery.html">More galley</a>
         </div>
       </div>
 
       <div class="dropdown">
         <a class="content effect" href="Gallery.html">Religion</a>
         <div class="dropdown-content">
-          <a class="effect" href="Gallery.html">Buddhism</a>
-          <a class="effect" href="Gallery.html">Christianity</a>
-          <a class="effect" href="Gallery.html">More galley</a>
+          <a class="effect" href="#" onclick="setReligion('Buddhism')">Buddhism</a>
+          <a class="effect" href="#" onclick="setReligion('Hinduism')">Hinduism</a>
+          <a class="effect" href="Gallery.html">More gallery</a>
         </div>
       </div>
 
-      <a class="content effect" href="">Gallery</a>
+      <a class="content effect" href="Gallery.html">Gallery</a>
       <div class="none-hover">Visitor <span id="viewCount">0</span></div>
     </div>
   </header>
@@ -62,7 +63,7 @@
     <div class="title">
       <h1>Contact us</h1>
     </div>
-    
+
     <div class="contact-form">
       <p style="text-align: center;">Have questions or want to RSVP? Fill out the form below!</p>
       <div class="form-grid">
@@ -79,7 +80,7 @@
       </div>
     </div>
   </div>
-  
+
   <!-- Ticket -->
   <div class="ticker-container">
     <div class="ticker" id="ticker">
@@ -99,7 +100,7 @@
         <h3>Sitemap</h3>
         <a href="Homepage.html">Homepage</a>
         <p></p>
-        <a href="">Gallery</a><br>
+        <a href="Gallery.html">Gallery</a><br>
         <a href="Event_Japan.html">&bull; Event_Japan</a><br>
         <a href="Event_Vietnam.html">&bull; Event_Vietnam</a><br>
         <a href="Event_China.html">&bull; Event_China</a>

@@ -16,6 +16,7 @@
   <script src="./JavaScript/ticket.js"></script>
   <script src="./JavaScript/visitor.js"></script>
   <script src="./JavaScript/check.js"></script>
+  <script src="./JavaScript/filter-nav.js"></script>
 
   <!-- css -->
   <link rel="stylesheet" href="./CSS/style.css">
@@ -36,20 +37,20 @@
           <a class="effect" href="Event_Vietnam.html">Vietnam</a>
           <a class="effect" href="Event_China.html">China</a>
           <a class="effect" href="Event_Japan.html">Japan</a>
-          <a class="effect" href="#">More galley</a>
+          <a class="effect" href="Gallery.html">More galley</a>
         </div>
       </div>
 
       <div class="dropdown">
         <a class="content effect" href="Gallery.html">Religion</a>
         <div class="dropdown-content">
-          <a class="effect" href="Gallery.html">Buddhism</a>
-          <a class="effect" href="Gallery.html">Christianity</a>
-          <a class="effect" href="Gallery.html">More galley</a>
+          <a class="effect" href="#" onclick="setReligion('Buddhism')">Buddhism</a>
+          <a class="effect" href="#" onclick="setReligion('Hinduism')">Hinduism</a>
+          <a class="effect" href="Gallery.html">More gallery</a>
         </div>
       </div>
 
-      <a class="content effect" href="">Gallery</a>
+      <a class="content effect" href="Gallery.html">Gallery</a>
       <div class="none-hover">Visitor <span id="viewCount">0</span></div>
     </div>
   </header>
@@ -58,8 +59,8 @@
   <div class="carousel">
     <div class="carousel-images">
       <a href="Event_Japan.html"><img class="carousel-image" src="./Image/Tsukimi.png" alt="Tsukimi Event"></a>
-      <a href="Event_China.html"></a><img class="carousel-image" src="./Image/China.jpg" alt="China Event">
-      <img class="carousel-image" src="3" alt="">
+      <a href="Event_China.html"><img class="carousel-image" src="./Image/China.jpg" alt="China Event"></a>
+      <a href="Event_Vietnam.html"><img class="carousel-image" src="./Image/Vietnam.png" alt="Vietnam Event"></a>
     </div>
   </div>
 
@@ -70,12 +71,14 @@
       <h1>The most of event</h1>
     </div>
     <div class="img-large">
-      <img src="" alt="">
-      <div class="img-content">
-        <h2>Mid-Autumn Festival - Vietnam</h2>
-        <div style="padding: 0 50px;">In Vietnam, the Mid-Autumn Festival will be calculated according to the Lunar
-          calendar, which takes place on August 15 of the lunar calendar every year</div>
-      </div>
+      <a href="Event_Vietnam.html">
+        <img src="./Image/Vietnam.png" alt="">
+        <div class="img-content">
+          <h2>Mid-Autumn Festival - Vietnam</h2>
+          <div style="padding: 0 50px;">In Vietnam, the Mid-Autumn Festival will be calculated according to the Lunar
+            calendar, which takes place on August 15 of the lunar calendar every year</div>
+        </div>
+      </a>
     </div>
     <div class="right-section">
       <div class="img-right-top">
@@ -160,7 +163,7 @@
         <h3>Sitemap</h3>
         <a href="Homepage.html">Homepage</a>
         <p></p>
-        <a href="">Gallery</a><br>
+        <a href="Gallery.html">Gallery</a><br>
         <a href="Event_Japan.html">&bull; Event_Japan</a><br>
         <a href="Event_Vietnam.html">&bull; Event_Vietnam</a><br>
         <a href="Event_China.html">&bull; Event_China</a>

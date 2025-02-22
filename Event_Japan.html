@@ -16,7 +16,8 @@
   <script src="./JavaScript/ticket.js"></script>
   <script src="./JavaScript/visitor.js"></script>
   <script src="./JavaScript/feedback.js"></script>
-  <script src="./JavaScript/breadcrumb.js" ></script>
+  <script src="./JavaScript/breadcrumb.js"></script>
+  <script src="./JavaScript/filter-nav.js"></script>
 
   <!-- css -->
   <link rel="stylesheet" href="./CSS/style.css">
@@ -45,26 +46,28 @@
           <a class="effect" href="Event_Vietnam.html">Vietnam</a>
           <a class="effect" href="Event_China.html">China</a>
           <a class="effect" href="Event_Japan.html">Japan</a>
-          <a class="effect" href="#">More galley</a>
+          <a class="effect" href="Gallery.html">More galley</a>
         </div>
       </div>
 
       <div class="dropdown">
         <a class="content effect" href="Gallery.html">Religion</a>
         <div class="dropdown-content">
-          <a class="effect" href="Gallery.html">Buddhism</a>
-          <a class="effect" href="Gallery.html">Christianity</a>
-          <a class="effect" href="Gallery.html">More galley</a>
+          <a class="effect" href="#" onclick="setReligion('Buddhism')">Buddhism</a>
+          <a class="effect" href="#" onclick="setReligion('Hinduism')">Hinduism</a>
+          <a class="effect" href="Gallery.html">More gallery</a>
         </div>
       </div>
 
-      <a class="content effect" href="">Gallery</a>
+      <a class="content effect" href="Gallery.html">Gallery</a>
       <div class="none-hover">Visitor <span id="viewCount">0</span></div>
     </div>
   </header>
 
   <!-- breadcrumb -->
-  <div class="breadcrumb"><a href="Homepage.html">Homepage</a> / <a href="Gallery.html">Gallery</a> / <a href="Event_Japan.html">Event_Japan</a></div> </div>
+  <div class="breadcrumb"><a href="Homepage.html">Homepage</a> / <a href="Gallery.html">Gallery</a> / <a
+      href="Event_Japan.html">Event_Japan</a></div>
+  </div>
 
   <!-- Carousel Section -->
   <div class="carousel">
@@ -80,35 +83,50 @@
     <div class="body-content-title">
       <h1>Tsukimi - The moonlight Japan event</h1>
     </div>
-    <div class="body-content" >
+    <div class="body-content">
       <p class="body-content-text" id="text">
         <strong>Mid-Autumn Japan</strong><br><br>
 
         <strong>History:</strong><br><br>
-        The Tsukimi Festival (月見, Tsukimi), or "moon-viewing," has been celebrated in Japan for over a thousand years. It originated during the Nara period (710-794) when it was introduced from China.<br><br>
-        It was initially a noble tradition where aristocrats of the Heian period (794-1185) gathered under the full moon to compose poetry and enjoy music.<br><br>
-        By the Edo period (1603-1868), Tsukimi became popular among commoners, evolving into a festival that honored the autumn harvest.<br><br>
-        Farmers would offer crops to the moon in gratitude for a bountiful season, solidifying the festival's agricultural significance.<br><br>
-        
+        The Tsukimi Festival (月見, Tsukimi), or "moon-viewing," has been celebrated in Japan for over a thousand years.
+        It originated during the Nara period (710-794) when it was introduced from China.<br><br>
+        It was initially a noble tradition where aristocrats of the Heian period (794-1185) gathered under the full moon
+        to compose poetry and enjoy music.<br><br>
+        By the Edo period (1603-1868), Tsukimi became popular among commoners, evolving into a festival that honored the
+        autumn harvest.<br><br>
+        Farmers would offer crops to the moon in gratitude for a bountiful season, solidifying the festival's
+        agricultural significance.<br><br>
+
         <strong>Meaning:</strong><br><br>
         The Tsukimi Festival symbolizes appreciation, gratitude, and the beauty of nature.<br><br>
-        The round full moon represents completeness and harmony, reinforcing themes of family unity and prosperity.<br><br>
-        The festival is also linked to Japanese folklore, particularly the tale of the Moon Rabbit (月の兎, Tsuki no Usagi), a celestial rabbit said to be pounding mochi on the moon.<br><br>
-        
+        The round full moon represents completeness and harmony, reinforcing themes of family unity and
+        prosperity.<br><br>
+        The festival is also linked to Japanese folklore, particularly the tale of the Moon Rabbit (月の兎, Tsuki no
+        Usagi), a celestial rabbit said to be pounding mochi on the moon.<br><br>
+
         <strong>Traditional:</strong><br><br>
-        <strong>Tsukimi Dango (月見団子):</strong> The most famous festival food, these round rice dumplings symbolize gratitude and good fortune.<br><br>
+        <strong>Tsukimi Dango (月見団子):</strong> The most famous festival food, these round rice dumplings symbolize
+        gratitude and good fortune.<br><br>
         They are often stacked in a pyramid shape, representing the full moon and prosperity.<br><br>
-        <strong>Susuki (ススキ, Pampas Grass):</strong> Pampas grass is displayed during Tsukimi as it is believed to protect against evil spirits and symbolize a good harvest.<br><br>
+        <strong>Susuki (ススキ, Pampas Grass):</strong> Pampas grass is displayed during Tsukimi as it is believed to
+        protect against evil spirits and symbolize a good harvest.<br><br>
         Its golden hues in autumn resemble ripened rice stalks, reinforcing the festival's agricultural roots.<br><br>
-        <strong>Moon Gazing:</strong> Families and friends gather at home, temples, or gardens with open views of the night sky to admire the beauty of the full moon.<br><br>
-        Traditional tea ceremonies and poetry recitations often accompany this practice, preserving Heian-era customs.<br><br>
-        <strong>Seasonal Foods:</strong> Besides Tsukimi Dango, people enjoy chestnuts, taro, sweet potatoes, and Tsukimi-style dishes such as Tsukimi Udon and Tsukimi Soba, which include raw or poached eggs resembling the moon.<br><br>
-        <strong>Folklore - The Moon Rabbit:</strong> Unlike the Chinese legend of Chang'e, Japanese folklore tells of a kind-hearted rabbit who was rewarded for its selflessness by being sent to the moon.<br><br>
-        There, it eternally pounds mochi, a story deeply tied to Tsukimi, and many decorations and sweets feature the Moon Rabbit.<br><br>
-        
+        <strong>Moon Gazing:</strong> Families and friends gather at home, temples, or gardens with open views of the
+        night sky to admire the beauty of the full moon.<br><br>
+        Traditional tea ceremonies and poetry recitations often accompany this practice, preserving Heian-era
+        customs.<br><br>
+        <strong>Seasonal Foods:</strong> Besides Tsukimi Dango, people enjoy chestnuts, taro, sweet potatoes, and
+        Tsukimi-style dishes such as Tsukimi Udon and Tsukimi Soba, which include raw or poached eggs resembling the
+        moon.<br><br>
+        <strong>Folklore - The Moon Rabbit:</strong> Unlike the Chinese legend of Chang'e, Japanese folklore tells of a
+        kind-hearted rabbit who was rewarded for its selflessness by being sent to the moon.<br><br>
+        There, it eternally pounds mochi, a story deeply tied to Tsukimi, and many decorations and sweets feature the
+        Moon Rabbit.<br><br>
+
         Tsukimi remains a cherished festival in Japan, blending ancient traditions with modern celebrations.<br><br>
-        Whether through poetic moon-gazing gatherings or simply enjoying a bowl of Tsukimi noodles, the festival continues to foster a sense of gratitude and appreciation for the beauty of autumn.<br><br>
-        
+        Whether through poetic moon-gazing gatherings or simply enjoying a bowl of Tsukimi noodles, the festival
+        continues to foster a sense of gratitude and appreciation for the beauty of autumn.<br><br>
+
         <strong>Gallery</strong><br><br>
         <img src="./Image/Emperor Go-Daigo.jpg" alt="">
         <img src="./Image/japan event.png" alt="">
@@ -126,31 +144,31 @@
   </div>
 
   <!-- Feedback -->
-<div class="feedback">
-  <div class="feedback-container">
-    <h1>User Feedback</h1>
-    <div class="form-group">
-      <div class="box">
-        <label>Name:</label>
-        <input placeholder="Enter your name" type="text" id="name">
+  <div class="feedback">
+    <div class="feedback-container">
+      <h1>User Feedback</h1>
+      <div class="form-group">
+        <div class="box">
+          <label>Name:</label>
+          <input placeholder="Enter your name" type="text" id="name">
+        </div>
+        <div class="box">
+          <label>Subject:</label>
+          <input placeholder="Enter your subject" type="text" id="subject">
+        </div>
       </div>
-      <div class="box">
-        <label>Subject:</label>
-        <input placeholder="Enter your subject" type="text" id="subject">
+      <div class="describe">
+        <div style="margin-bottom: 5px;">
+          <label>Describe:</label>
+        </div>
+        <div>
+          <textarea placeholder="Enter your Describe" id="description"></textarea>
+        </div>
       </div>
+      <button class="confirm-button" onclick="submitFeedback()">Confirm</button>
+      <div class="feedback-box" id="feedbackSection">Feedback user</div>
     </div>
-    <div class="describe">
-      <div style="margin-bottom: 5px;">
-        <label>Describe:</label>
-      </div>
-      <div>
-        <textarea placeholder="Enter your Describe" id="description"></textarea>
-      </div>
-    </div>
-    <button class="confirm-button" onclick="submitFeedback()">Confirm</button>
-    <div class="feedback-box" id="feedbackSection">Feedback user</div>
   </div>
-</div>
 
   <!-- Ticket -->
   <div class="ticker-container">
@@ -171,7 +189,7 @@
         <h3>Sitemap</h3>
         <a href="Homepage.html">Homepage</a>
         <p></p>
-        <a href="">Gallery</a><br>
+        <a href="Gallery.html">Gallery</a><br>
         <a href="Event_Japan.html">&bull; Event_Japan</a><br>
         <a href="Event_Vietnam.html">&bull; Event_Vietnam</a><br>
         <a href="Event_China.html">&bull; Event_China</a>

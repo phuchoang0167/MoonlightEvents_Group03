@@ -1,11 +1,15 @@
-let viewCount = localStorage.getItem('viewCount');
+document.addEventListener("DOMContentLoaded", function () {
+    let viewCount = localStorage.getItem('viewCount');
+    viewCount = viewCount ? parseInt(viewCount) : 0;
 
-if (!viewCount) {
-    viewCount = 0;
-}
+    viewCount++;
 
-viewCount++;
+    localStorage.setItem('viewCount', viewCount);
 
-localStorage.setItem('viewCount', viewCount);
-
-document.getElementById('viewCount').innerText = viewCount;
+    let viewCountElement = document.getElementById('viewCount');
+    if (viewCountElement) {
+        viewCountElement.innerText = viewCount;
+    } else {
+        console.error("Không tìm thấy phần tử có id='viewCount'");
+    }
+});

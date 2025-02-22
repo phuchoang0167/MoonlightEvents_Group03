@@ -16,13 +16,14 @@
   <script src="./JavaScript/ticket.js"></script>
   <script src="./JavaScript/visitor.js"></script>
   <script src="./JavaScript/feedback.js"></script>
-  <script src="./JavaScript/breadcrumb.js" ></script>
+  <script src="./JavaScript/breadcrumb.js"></script>
+  <script src="./JavaScript/filter-nav.js"></script>
 
   <!-- css -->
   <link rel="stylesheet" href="./CSS/style.css">
 
   <title>Event_China</title>
-  
+
   <script>
     //show more
     function expandText() {
@@ -46,26 +47,28 @@
           <a class="effect" href="Event_Vietnam.html">Vietnam</a>
           <a class="effect" href="Event_China.html">China</a>
           <a class="effect" href="Event_Japan.html">Japan</a>
-          <a class="effect" href="#">More galley</a>
+          <a class="effect" href="Gallery.html">More galley</a>
         </div>
       </div>
 
       <div class="dropdown">
         <a class="content effect" href="Gallery.html">Religion</a>
         <div class="dropdown-content">
-          <a class="effect" href="Gallery.html">Buddhism</a>
-          <a class="effect" href="Gallery.html">Christianity</a>
-          <a class="effect" href="Gallery.html">More galley</a>
+          <a class="effect" href="#" onclick="setReligion('Buddhism')">Buddhism</a>
+          <a class="effect" href="#" onclick="setReligion('Hinduism')">Hinduism</a>
+          <a class="effect" href="Gallery.html">More gallery</a>
         </div>
       </div>
 
-      <a class="content effect" href="">Gallery</a>
+      <a class="content effect" href="Gallery.html">Gallery</a>
       <div class="none-hover">Visitor <span id="viewCount">0</span></div>
     </div>
   </header>
 
   <!-- breadcrumb -->
-  <div class="breadcrumb"><a href="Homepage.html">Homepage</a> / <a href="Gallery.html">Gallery</a> / <a href="Event_China.html">Event_China</a></div> </div>
+  <div class="breadcrumb"><a href="Homepage.html">Homepage</a> / <a href="Gallery.html">Gallery</a> / <a
+      href="Event_China.html">Event_China</a></div>
+  </div>
 
   <!-- Carousel Section -->
   <div class="carousel">
@@ -81,25 +84,30 @@
     <div class="body-content-title">
       <h1>Mid autumn festival - The moonlight China event</h1>
     </div>
-    <div class="body-content" >
+    <div class="body-content">
       <p class="body-content-text" id="text">
         <strong>Mid-Autumn China</strong><br><br>
 
         <strong>History:</strong><br><br>
         The Mid-Autumn Festival (中秋节, Zhōngqiū Jié) dates back over 3,000 years to the Zhou Dynasty.<br><br>
         It was originally a harvest festival celebrating the moon and giving thanks for the season's bounty.<br><br>
-        During the Tang (618 - 907) and Song (960 - 1279) dynasties, it became a more established festival with moon-viewing traditions, poetry, and family gatherings.<br><br>
+        During the Tang (618 - 907) and Song (960 - 1279) dynasties, it became a more established festival with
+        moon-viewing traditions, poetry, and family gatherings.<br><br>
 
         <strong>Meaning:</strong><br><br>
         The festival symbolizes family reunion, gratitude, and harmony.<br><br>
-        The full moon represents unity, and people celebrate by gathering with loved ones, appreciating the moon, and offering prayers for happiness and prosperity.<br><br>
+        The full moon represents unity, and people celebrate by gathering with loved ones, appreciating the moon, and
+        offering prayers for happiness and prosperity.<br><br>
 
         <strong>Traditional:</strong><br><br>
-        <strong>Mooncakes (月饼, yuèbǐng):</strong> The most famous festival food, these round pastries symbolize unity and completeness.<br><br>
+        <strong>Mooncakes (月饼, yuèbǐng):</strong> The most famous festival food, these round pastries symbolize unity
+        and completeness.<br><br>
         <strong>Moon Gazing:</strong> Families and friends gather outdoors to admire the full moon.<br><br>
-        <strong>Lantern Displays:</strong> Colorful lanterns are lit and released, symbolizing hope and good fortune.<br><br>
+        <strong>Lantern Displays:</strong> Colorful lanterns are lit and released, symbolizing hope and good
+        fortune.<br><br>
         <strong>Dragon and Lion Dances:</strong> Some regions hold performances to celebrate the occasion.<br><br>
-        <strong>Worshiping the Moon Goddess Chang'e (嫦娥):</strong> Legends tell of Chang'e, who drank an elixir of immortality and now resides on the moon.<br><br>
+        <strong>Worshiping the Moon Goddess Chang'e (嫦娥):</strong> Legends tell of Chang'e, who drank an elixir of
+        immortality and now resides on the moon.<br><br>
 
         <strong>Gallery</strong><br><br>
         <img src="./Image/traditional.png" alt="">
@@ -115,35 +123,36 @@
   <!-- dowload button -->
   <div class="dowload-button">
     <button><a href="./File dowload/Mid-Autumn China.docx" download>Download doc</a></button>
-    <button><a href="./File dowload/Mid-Autumn China.pdf" type="application/octet-stream" download>Download pdf</a></button>
+    <button><a href="./File dowload/Mid-Autumn China.pdf" type="application/octet-stream" download>Download
+        pdf</a></button>
   </div>
 
   <!-- Feedback -->
-<div class="feedback">
-  <div class="feedback-container">
-    <h1>User Feedback</h1>
-    <div class="form-group">
-      <div class="box">
-        <label>Name:</label>
-        <input placeholder="Enter your name" type="text" id="name">
+  <div class="feedback">
+    <div class="feedback-container">
+      <h1>User Feedback</h1>
+      <div class="form-group">
+        <div class="box">
+          <label>Name:</label>
+          <input placeholder="Enter your name" type="text" id="name">
+        </div>
+        <div class="box">
+          <label>Subject:</label>
+          <input placeholder="Enter your subject" type="text" id="subject">
+        </div>
       </div>
-      <div class="box">
-        <label>Subject:</label>
-        <input placeholder="Enter your subject" type="text" id="subject">
+      <div class="describe">
+        <div style="margin-bottom: 5px;">
+          <label>Describe:</label>
+        </div>
+        <div>
+          <textarea placeholder="Enter your Describe" id="description"></textarea>
+        </div>
       </div>
+      <button class="confirm-button" onclick="submitFeedback()">Confirm</button>
+      <div class="feedback-box" id="feedbackSection">Feedback user</div>
     </div>
-    <div class="describe">
-      <div style="margin-bottom: 5px;">
-        <label>Describe:</label>
-      </div>
-      <div>
-        <textarea placeholder="Enter your Describe" id="description"></textarea>
-      </div>
-    </div>
-    <button class="confirm-button" onclick="submitFeedback()">Confirm</button>
-    <div class="feedback-box" id="feedbackSection">Feedback user</div>
   </div>
-</div>
 
   <!-- Ticket -->
   <div class="ticker-container">
@@ -164,7 +173,7 @@
         <h3>Sitemap</h3>
         <a href="Homepage.html">Homepage</a>
         <p></p>
-        <a href="">Gallery</a><br>
+        <a href="Gallery.html">Gallery</a><br>
         <a href="Event_Japan.html">&bull; Event_Japan</a><br>
         <a href="Event_Vietnam.html">&bull; Event_Vietnam</a><br>
         <a href="Event_China.html">&bull; Event_China</a>
