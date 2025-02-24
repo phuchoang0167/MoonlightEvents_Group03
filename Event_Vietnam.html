@@ -25,11 +25,15 @@
   <title>Event_Japan</title>
 
   <script>
-    function expandText() {
-      var text = document.getElementById("text");
-      text.classList.add("expanded"); // Expand the text
-      document.getElementById("myBtn").style.display = "none"; // Hide the button
-    }
+    document.addEventListener("DOMContentLoaded", function() {
+      let btn = document.getElementById("myBtn");
+      let text = document.getElementById("text");
+
+      btn.addEventListener("click", function() {
+        text.classList.add("expanded");
+        btn.style.display = "none"; 
+      });
+    });
   </script>
 
 </head>
@@ -72,9 +76,24 @@
   <!-- Carousel Section -->
   <div class="carousel">
     <div class="carousel-images">
-      <img class="carousel-image" src="./Image/Vietnam.png" alt="">
-      <img class="carousel-image" src="./Image/vietnam(2).jpg" alt="">
-      <img class="carousel-image" src="./Image/vietnam(3).jpg" alt="">
+      <a>
+        <div class="carousel-image">
+          <h3 class="caurosel-title">The Lantern</h3>
+          <div><img src="./Image/Vietnam.png"></div>
+        </div>
+      </a>
+      <a>
+        <div class="carousel-image">
+          <h3 class="caurosel-title">The Lion dancing</h3>
+          <div><img src="./Image/vietnam(2).jpg"></div>
+        </div>
+      </a>
+      <a>
+        <div class="carousel-image">
+          <h3 class="caurosel-title">The street view</h3>
+          <div><img src="./Image/vietnam(3).jpg"></div>
+        </div>
+      </a>
     </div>
   </div>
 
@@ -84,18 +103,18 @@
       <h1>Mid-Autumn festival - The moonlight Vietnam event</h1>
     </div>
     <div class="body-content">
-      <p class="body-content-text" id="text">
-        <strong>Mid-Autumn Vietnam</strong><br><br>
+      <div class="body-content-text" id="text">
+        <h2 style="text-align: center;">Mid-Autumn Vietnam</h2>
 
-        <strong>Every Vietnamese child dreams about an amazing Tết Trung Thu</strong> with his or her own brightly lit
+        <h3>Every Vietnamese child dreams about an amazing Tết Trung Thu</h3> with his or her own brightly lit
         lantern and a belly full of mooncakes.
         Tết Trung Thu or Mid-autumn Festival, is also known in Vietnam as the “Children’s Festival”.
         This year, the Mid-autumn Festival will be held October 1, 2020, in the middle of the eighth lunar month,
         however, preparations begin far in advance.
         Here’s how to make the most of this magical holiday.<br><br>
 
-        <strong>Lanterns adorn cities across Vietnam during Mid-autumn Festival.</strong><br><br>
-        <img src="./Image/image001.jpg" alt="Lanterns in Vietnam"><br><br>
+        <img src="./Image/image001.jpg" alt="Lanterns in Vietnam">
+        <h3>Lanterns adorn cities across Vietnam during Mid-autumn Festival.</h3>
         While the Mid-autumn Festival originated in China and is celebrated in many Asian countries, the Vietnamese
         version has its own traditions and legends.
         Our best-known tale is about a man named Cuội who hung on to a magical banyan tree as it floated up to the
@@ -104,16 +123,16 @@
         Children parade lanterns in the streets the night of Mid-autumn Festival to help light the way to earth for Cuội
         from the moon.<br><br>
 
-        <strong>As an important festival for children, toys can be found all over Vietnam's cities the weeks before
-          Mid-autumn.</strong><br><br>
-        <img src="./Image/image002.jpg" alt="Toys for Mid-autumn"><br><br>
+        <img src="./Image/image002.jpg" alt="Toys for Mid-autumn">
+        <h3>As an important festival for children, toys can be found all over Vietnam's cities the weeks before
+          Mid-autumn.</h3>
         In the weeks before Tết Trung Thu, you will see and hear groups of lion dancers practicing on the streets.
         Mooncake stalls appear on every other corner, pop-ups with elaborately decorated boxes filled with a variety of
         mystery cakes and fillings.
         City districts team up with preparations of toys, lanterns, and colorful masks in anticipation.<br><br>
 
-        <strong>Mooncakes are best enjoyed with a hot cup of green tea.</strong><br><br>
-        <img src="./Image/image003.jpg" alt="Vietnamese Mooncakes"><br><br>
+        <img src="./Image/image003.jpg" alt="Vietnamese Mooncakes">
+        <h3>Mooncakes are best enjoyed with a hot cup of green tea.</h3><br><br>
         All across Vietnam, families welcome Tết Trung Thu by placing a five-fruit tray and cakes on their ancestral
         altar.
         We offer the food to our ancestors and worship before feasting on mooncakes—usually outside under the light of
@@ -121,25 +140,25 @@
         The two most common types are bánh dẻo (soft, sticky cakes with a mochi-texture) and bánh nướng (baked cakes
         with a thick wheat crust).<br><br>
 
-        <strong>Families pick up lanterns, toys, and treats in the alleyways of Ho Chi Minh City's Cholon
-          District.</strong><br><br>
-        <img src="./Image/image004.jpg" alt="Mid-autumn in Ho Chi Minh City"><br><br>
+        <img src="./Image/image004.jpg" alt="Mid-autumn in Ho Chi Minh City">
+        <h3>Families pick up lanterns, toys, and treats in the alleyways of Ho Chi Minh City's Cholon
+          District.</strong>
         On the night of the full moon, children bearing brightly colored lanterns form raucous processions and tour
         their neighborhoods singing songs.
         You will see a male dancer wearing a round happy-faced mask that symbolizes the moon.
         This is the Earth God, Ông Địa, who represents the fullness of the earth and reminds onlookers to give thanks
         for its bounty.<br><br>
 
-        <strong>Lion heads on display for purchase in Ho Chi Minh City.</strong><br><br>
-        <img src="./Image/image005.jpg" alt="Lion Dance"><br><br>
+        <img src="./Image/image005.jpg" alt="Lion Dance">
+        <h3>Lion heads on display for purchase in Ho Chi Minh City.</h3>
         Lion dancing or múa lân is an essential element of the Mid-autumn festivities.
         Groups of children gather, each carrying a red lantern.
         Excitement peaks when drumbeats ring out from down the dark street.<br><br>
 
-        <strong>Mid-autumn is best enjoyed by moonlit strolls in major destinations.</strong><br><br>
+        <h3>Mid-autumn is best enjoyed by moonlit strolls in major destinations.</h3>
         <img src="./Image/image006.jpg" alt="Mid-autumn in Hanoi">
 
-      </p>
+      </div>
       <button onclick="expandText()" id="myBtn">Read more</button>
     </div>
   </div>
@@ -173,7 +192,12 @@
         </div>
       </div>
       <button class="confirm-button" onclick="submitFeedback()">Confirm</button>
-      <div class="feedback-box" id="feedbackSection">Feedback user</div>
+    </div>
+  </div>
+  <div class="feedback">
+    <div class="feedback-container">
+      <h2>Feedback User</h2>
+      <div id="feedbackSection"></div>
     </div>
   </div>
 
@@ -196,10 +220,10 @@
         <h3>Sitemap</h3>
         <a href="Homepage.html">Homepage</a>
         <p></p>
-        <a href="Gallery.html">Gallery</a><br>
-        <a href="Event_Japan.html">&bull; Event_Japan</a><br>
-        <a href="Event_Vietnam.html">&bull; Event_Vietnam</a><br>
-        <a href="Event_China.html">&bull; Event_China</a>
+        <a href="Gallery.html">Gallery</a>
+        <div class="a-foot"><a  href="Event_Japan.html">&bull; Event_Japan</a></div>
+        <div class="a-foot"><a href="Event_Vietnam.html">&bull; Event_Vietnam</a></div>
+        <div class="a-foot"><a href="Event_China.html">&bull; Event_China</a></div>
         <p></p>
         <a href="#">FAQ</a>
         <p></p>
@@ -210,10 +234,10 @@
       </div>
       <div class="footer-section">
         <h3>About us</h3>
-        <p>If you want to know more and more with us</p>
+        If you want to know more and more with us
         <a href="#">Here to know who we are</a>
         <h3>FAQ</h3>
-        <p>You can find some question you must be read them</p>
+        You can find some question you must be read them
         <a href="#">Sometime you need them</a>
       </div>
       <div class="footer-section">

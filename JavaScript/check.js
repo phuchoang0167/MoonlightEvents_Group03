@@ -35,6 +35,5 @@ const check = () => {
         return false;
     }
 
-    alert("Form submitted successfully!");
     return true;
 };

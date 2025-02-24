@@ -14,7 +14,6 @@ button:hover{
 }
 
 
-
   /* Navbar */
  
   #navbar {
@@ -93,7 +92,7 @@ button:hover{
       border-radius: 5px;
     }
 
-  /* breadcrumb */
+  /* Breadcrumb */
   .breadcrumb{
     width: 1270px;
     margin: auto;
@@ -117,16 +116,28 @@ button:hover{
     margin-top: 30px;
     margin-bottom: 60px;
   }
+  .carousel img{
+    width: 1270px;
+  }
+  .caurosel-title{
+    position: absolute;
+    background-color: #FEF9E1;
+    opacity: 80%;
+    width: 20%;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 5px;
+    text-align: center;
+    color: #000;
+  }
 
   .carousel-images {
     display: flex;
     transition: transform 0.5s ease-in-out;
   }
-
   .carousel-image {
     min-width: 100%;
   }
-
 
   @keyframes slide {
     0% { transform: translateX(0); }
@@ -304,21 +315,23 @@ button:hover{
     padding: 20px;
     margin-bottom: 30px;
   }
+  .body-content img{
+    width: 100%;
+    border-radius: 5px;
+  }
 
   .body-content-text {
     color: #000;
-    max-height: 100px; /* Limit initial height */
+    max-height: 300px; /* Limit initial height */
     overflow: hidden;
     transition: max-height 0.5s ease-in-out;
   }
-  .body-content-text img{
-    border-radius: 5px;
-    width: 100%;
-  }
+
   .expanded {
-    max-height: 100%; /* Expand to full height */
+    max-height: none; /* Expand to full height */
   }
   .body-content button{
+    margin-top: 20px;
     margin-left: 20%;
     width: 60%;
   }
@@ -346,6 +359,11 @@ button:hover{
   .form-grid{
     display: grid;
     grid-template-columns:   60% 40%;
+  }
+  .form-grid input, .form-grid textarea{
+    border-radius: 5px;
+    background-color: #FEF9E1;
+    border: 1px solid #A31D1D;
   }
   .contact-form form{
     display: block;
@@ -386,7 +404,7 @@ button:hover{
     margin-top: 30px;
     margin-bottom: 60px;
   }
-  .feedback-container h1{
+  .feedback-container h1, .feedback-container h2{
     color: #A31D1D;
   }
   .box{
@@ -431,11 +449,12 @@ button:hover{
     margin-left: 90%;
   }
   .feedback-box {
+    padding: 20px;
+    margin-bottom: 20px;
     border-radius: 5px;
-    margin-top: 20px;
-    padding: 10px;
+    box-shadow: 2px 2px 4px 4px rgba(0,0,0,0.2);
     background: #FEF9E1;
-    border: 1px solid #A31D1D;
+    color: #A31D1D;
   }
 
   /* Subscribe */
@@ -525,6 +544,11 @@ button:hover{
   }
 
   /* Footer */
+  .a-foot{
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 14px;
+  }
   footer{
     background-color: #FFEEAD;
   }
@@ -541,6 +565,7 @@ button:hover{
         margin-bottom: 5px;
       }
       .footer-section a {
+        margin: 0;
           color: #A31D1D;
           text-decoration: none;
           display: block;

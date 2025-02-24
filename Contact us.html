@@ -67,11 +67,11 @@
     <div class="contact-form">
       <p style="text-align: center;">Have questions or want to RSVP? Fill out the form below!</p>
       <div class="form-grid">
-        <form action="" onsubmit="check()">
-          <div><label for="name">Your Name:</label> <input type="text" id="txtName" name="name"></div>
-          <div><label for="email">Your Email:</label> <input type="email" id="txtMail" name="email"></div>
-          <div><label for="email">Your Address:</label> <input type="address" id="txtAddress" name="address"></div>
-          <div><label for="message">Your Message:</label> <textarea id="txtMessage"></textarea></div>
+        <form action="" onsubmit="return check()">
+          <div><label for="name">Your Name:</label> <input type="text" id="txtName" name="name" autofocus required></div><br>
+          <div><label for="email">Your Email:</label> <input type="email" id="txtMail" name="email" required></div><br>
+          <div><label for="email">Your Address:</label> <input type="address" id="txtAddress" name="address" required></div><br>
+          <div><label for="message">Your Message:</label> <textarea id="txtMessage"></textarea></div><br>
           <button type="submit">Submit</button>
         </form>
         <div class="contact-img">
@@ -100,10 +100,10 @@
         <h3>Sitemap</h3>
         <a href="Homepage.html">Homepage</a>
         <p></p>
-        <a href="Gallery.html">Gallery</a><br>
-        <a href="Event_Japan.html">&bull; Event_Japan</a><br>
-        <a href="Event_Vietnam.html">&bull; Event_Vietnam</a><br>
-        <a href="Event_China.html">&bull; Event_China</a>
+        <a href="Gallery.html">Gallery</a>
+        <div class="a-foot"><a  href="Event_Japan.html">&bull; Event_Japan</a></div>
+        <div class="a-foot"><a href="Event_Vietnam.html">&bull; Event_Vietnam</a></div>
+        <div class="a-foot"><a href="Event_China.html">&bull; Event_China</a></div>
         <p></p>
         <a href="#">FAQ</a>
         <p></p>
@@ -114,10 +114,10 @@
       </div>
       <div class="footer-section">
         <h3>About us</h3>
-        <p>If you want to know more and more with us</p>
+        If you want to know more and more with us
         <a href="#">Here to know who we are</a>
         <h3>FAQ</h3>
-        <p>You can find some question you must be read them</p>
+        You can find some question you must be read them
         <a href="#">Sometime you need them</a>
       </div>
       <div class="footer-section">

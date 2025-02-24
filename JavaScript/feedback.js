@@ -8,7 +8,7 @@ function submitFeedback() {
         let feedbackBox = document.createElement('div');
         feedbackBox.classList.add('feedback-box');
         let timestamp = new Date().toLocaleTimeString();
-        feedbackBox.innerHTML = `<p><strong>${name} (${subject})</strong></p><p>${description}</p><p class='timestamp'>${timestamp}</p>`;
+        feedbackBox.innerHTML = `<h3>${name} (${subject})</h3><p>${description}</p><p class='timestamp'>${timestamp}</p>`;
         feedbackSection.appendChild(feedbackBox);
         
         document.getElementById('name').value = '';
