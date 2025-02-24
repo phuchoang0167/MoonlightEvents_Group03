@@ -17,7 +17,7 @@ Documentations : https://github.com/phuchoang0167/MoonlightEvents_Group03/tree/m
 
 =======================================
 
-Published website : https://phuchoang0167.github.io/MoonlightEvents_Group03/Homepage.html
+Published website :  https://phuchoang0167.github.io/MoonlightEvents_Group03/Homepage.html
 
 =======================================
 
