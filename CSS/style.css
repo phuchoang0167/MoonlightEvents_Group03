@@ -196,6 +196,23 @@ button:hover{
     grid-template-rows: 50% 50%;
   }
 
+  /* Side */
+  .img-side-left{
+    position: absolute;
+    margin-left: 50px;
+    top: 200px;
+  }
+  .img-side-right{
+    position: absolute;
+    top: 200px;
+    left: 81%;
+  }
+  .img-side-left img, .img-side-right img{
+    height: auto;
+    border-radius: 5px;
+    width: 300px;
+  }
+
   /* Filter - event */
   .filter {
     margin: auto;
